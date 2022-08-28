@@ -340,13 +340,13 @@
                                 </div>
                                 <div class="input-group row g-3 mb-3">
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="Name" type="text" placeholder="Nombre(s)" class="form-control" name="{{form.name.name}}" required>
+                                        <input id="Name" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="Nombre(s)" class="form-control" name="{{form.name.name}}" required>
                                         <label for="Name">
                                             Nombre(s)
                                         </label>
                                     </div>
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="LastName" type="text" placeholder="Apellido(s)" class="form-control" name="{{form.last_name.name}}" required>
+                                        <input id="LastName" type="text" onkeyup="this.value = this.value.toUpperCase();" placeholder="Apellido(s)" class="form-control" name="{{form.last_name.name}}" required>
                                         <label for="LastName">
                                             Apellido(s)
                                         </label>

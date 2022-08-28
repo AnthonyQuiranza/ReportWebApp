@@ -1,4 +1,5 @@
 function alerta() {
     console.log("La consola esta funcionando");
-    toastr.info('Are you the 6 fingered man?');
+    toastr.success('Registro correcto, se ha enviado un código de verificación a tu correo electrónico.',"CITAS CUBA");
 }
+

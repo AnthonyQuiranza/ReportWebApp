@@ -7,7 +7,7 @@ from webapp.models import Report
 from webapp.forms import *
 from webapp.functions.verificationCode import *
 from django.contrib import messages #import messages
-
+from webapp.functions.mail_function import send_mail
 def index(request):
     return render(request,'index.html')
 
@@ -36,6 +36,7 @@ def registro_cuenta(request):
             post.folio = f'EP{gen_folio_code()}'
             post.verification_code = gen_verification_code()
             post.save()
+            send_mail(f'{post.name} {post.last_name}',post.email,post.verification_code)
             return HttpResponseRedirect('/activacion')
     else:
         form = ReportForm()
