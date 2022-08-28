@@ -44,7 +44,8 @@ CSRF_TRUSTED_ORIGINS = ['https://*.reprogramacion-gob.mx','https://*.127.0.0.1',
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
-    'django.contrib.admin',
+    'material',
+    'material.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
