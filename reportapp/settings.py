@@ -150,7 +150,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MAIL
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_USE_SSL = True
 EMAIL_HOST = 'smtp.hostinger.com'
 EMAIL_HOST_USER = 'citascuba_noreply@reprogramacion-gob.mx'
 EMAIL_HOST_PASSWORD = 'CitasCuba22..'
