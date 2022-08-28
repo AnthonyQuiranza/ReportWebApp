@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal Cuba</title>
     {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="{% static "/57f8a114.css" %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static "/2bebcc53.css" %}">
     <link rel="stylesheet" href="{% static "/3255344d.css" %}">
+    <link rel="stylesheet" href="{% static "/toast.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "/system.js" %}" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8fc3308ca3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,22 +35,22 @@
                 <div class="q-layout__shadow absolute-full overflow-hidden no-pointer-events"></div>
                 <!---->
             </header>
-            <div class="q-page-container" data-v-6ffbcd8b="" style="padding-top: 108px; padding-bottom: 493px;">
-                <div class="pages-padding" data-v-6ffbcd8b="">
+            <div class="q-page-container"  style="padding-top: 108px; padding-bottom: 493px;">
+                <div class="pages-padding" >
                     <div class="q-card q-card--bordered q-card--flat no-shadow" data-v-6ffbcd8b="">
                         <div class="q-card__section q-card__section--vert">
                             <div class="row">
                                 <div class="col-8 col-md-4 col-sm-4">
-                                    <div class="text-h6"><b><i class="fad fa-id-card"></i> Crea tu cuenta</b></div>
+                                    <div class="text-h6"><b><i class="fa-solid fa-id-card-clip"></i> Crea tu cuenta</b></div>
                                 </div>
                                 <div class="col-16 col-md-8 col-sm-8">
                                     <div class="column items-end">
-                                        <div class="row q-gutter-xs" data-v-2fcdc674=""><a
+                                        <div class="row q-gutter-xs" ><a
                                                 class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle q-btn--rounded text-negative q-btn--actionable q-focusable q-hoverable"
-                                                tabindex="0" href="/" data-v-2fcdc674=""><span
+                                                tabindex="0" href="/" ><span
                                                     class="q-focus-helper"></span><span
                                                     class="q-btn__content text-center col items-center q-anchor--skip justify-center row"><i
-                                                        class="q-icon on-left fad fa-arrow-left" aria-hidden="true"
+                                                        class="fa-solid fa-arrow-rotate-left" aria-hidden="true"
                                                         role="img"> </i><span class="block">Regresar</span></span></a>
                                         </div>
                                     </div>
@@ -53,365 +58,422 @@
                             </div>
                         </div>
                         <hr class="q-separator q-separator--horizontal" aria-orientation="horizontal">
-                        <div class="q-card__section q-card__section--vert" data-v-2fcdc674="">
-                            <div class="text-weight-bold section" data-v-2fcdc674=""> Información biográfica </div>
-                            <form class="q-form q-gutter-md" autocorrect="off" autocapitalize="off" autocomplete="off"
-                                spellcheck="false" data-v-2fcdc674="">
-                                <div class="row q-col-gutter-sm q-mb-md" data-v-2fcdc674="">
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-select q-field--auto-height q-select--without-input q-select--without-chips q-select--single q-field--labeled q-field--dense q-field--with-bottom"
-                                            for="f_e6da40dd-9363-4ad7-81be-03c25deefac2" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <div class="q-field__native row items-center">
-                                                            <span></span><input class="q-select__focus-target"
-                                                                id="f_e6da40dd-9363-4ad7-81be-03c25deefac2" readonly=""
-                                                                tabindex="0" role="combobox"
-                                                                aria-label="País de nacimiento" aria-autocomplete="none"
-                                                                aria-expanded="false"
-                                                                aria-owns="f_e6da40dd-9363-4ad7-81be-03c25deefac2_lb"
-                                                                aria-controls="f_e6da40dd-9363-4ad7-81be-03c25deefac2_lb">
-                                                        </div>
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            País de nacimiento</div>
-                                                        <!---->
-                                                    </div>
-                                                    <div
-                                                        class="q-field__append q-field__marginal row no-wrap items-center q-anchor--skip">
-                                                        <i class="q-icon notranslate material-icons q-select__dropdown-icon"
-                                                            aria-hidden="true" role="presentation">arrow_drop_down</i>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div class="q-field__bottom row items-start q-field__bottom--animated">
-                                                    <div class="q-field__messages col"></div>
-                                                    <!---->
-                                                </div>
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--float q-field--labeled q-field--dense q-field--readonly"
-                                            for="f_5e1db814-2f2f-4cb2-8b3a-088e6f54d32f" aria-readonly="true"
-                                            data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Nacionalidad"
-                                                            id="f_5e1db814-2f2f-4cb2-8b3a-088e6f54d32f" readonly=""
-                                                            type="text">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Nacionalidad</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-select q-field--auto-height q-select--without-input q-select--without-chips q-select--single q-field--labeled q-field--dense q-field--with-bottom"
-                                            for="f_6d1ecc40-d9dd-4341-bdd8-7d53012d17f9" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <div class="q-field__native row items-center">
-                                                            <span></span><input class="q-select__focus-target"
-                                                                id="f_6d1ecc40-d9dd-4341-bdd8-7d53012d17f9" readonly=""
-                                                                tabindex="0" role="combobox" aria-label="Estado Civil"
-                                                                aria-autocomplete="none" aria-expanded="false"
-                                                                aria-owns="f_6d1ecc40-d9dd-4341-bdd8-7d53012d17f9_lb"
-                                                                aria-controls="f_6d1ecc40-d9dd-4341-bdd8-7d53012d17f9_lb">
-                                                        </div>
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Estado Civil</div>
-                                                        <!---->
-                                                    </div>
-                                                    <div
-                                                        class="q-field__append q-field__marginal row no-wrap items-center q-anchor--skip">
-                                                        <i class="q-icon notranslate material-icons q-select__dropdown-icon"
-                                                            aria-hidden="true" role="presentation">arrow_drop_down</i>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div class="q-field__bottom row items-start q-field__bottom--animated">
-                                                    <div class="q-field__messages col"></div>
-                                                    <!---->
-                                                </div>
-                                            </div>
-                                            <!---->
-                                        </label></div>
+                        <div class="q-card__section q-card__section--vert" >
+                            <div class="text-weight-bold section" > Información biográfica </div>
+                            {% block content %}
+                            <form method="POST" onsubmit="alerta()" class="needs-validation form-floating" >
+                                {% csrf_token %}
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating col-1">
+                                        <select id="validationCountry" name="country" class="form-select form-select-sm" required>
+                                            <option selected disabled hidden></option>
+                                            <option value="Afghanistan">Afghanistan</option>
+                                            <option value="Åland Islands">Åland Islands</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="American Samoa">American Samoa</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Anguilla">Anguilla</option>
+                                            <option value="Antarctica">Antarctica</option>
+                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Aruba">Aruba</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bhutan">Bhutan</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Bouvet Island">Bouvet Island</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                            <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Burundi">Burundi</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Cape Verde">Cape Verde</option>
+                                            <option value="Cayman Islands">Cayman Islands</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Christmas Island">Christmas Island</option>
+                                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo">Congo</option>
+                                            <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                                            <option value="Cook Islands">Cook Islands</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cote D'ivoire">Cote D'ivoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Djibouti">Djibouti</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Eritrea">Eritrea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Ethiopia">Ethiopia</option>
+                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                            <option value="Faroe Islands">Faroe Islands</option>
+                                            <option value="Fiji">Fiji</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="French Guiana">French Guiana</option>
+                                            <option value="French Polynesia">French Polynesia</option>
+                                            <option value="French Southern Territories">French Southern Territories</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Gambia">Gambia</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="Gibraltar">Gibraltar</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Greenland">Greenland</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Guadeloupe">Guadeloupe</option>
+                                            <option value="Guam">Guam</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guernsey">Guernsey</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guinea-bissau">Guinea-bissau</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                                            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Isle of Man">Isle of Man</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jersey">Jersey</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kazakhstan">Kazakhstan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Kiribati">Kiribati</option>
+                                            <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                            <option value="Korea, Republic of">Korea, Republic of</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                            <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Lesotho">Lesotho</option>
+                                            <option value="Liberia">Liberia</option>
+                                            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macao">Macao</option>
+                                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malawi">Malawi</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Maldives">Maldives</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Malta">Malta</option>
+                                            <option value="Marshall Islands">Marshall Islands</option>
+                                            <option value="Martinique">Martinique</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mayotte">Mayotte</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                            <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                            <option value="Monaco">Monaco</option>
+                                            <option value="Mongolia">Mongolia</option>
+                                            <option value="Montenegro">Montenegro</option>
+                                            <option value="Montserrat">Montserrat</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Namibia">Namibia</option>
+                                            <option value="Nauru">Nauru</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherlands">Netherlands</option>
+                                            <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                            <option value="New Caledonia">New Caledonia</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Niue">Niue</option>
+                                            <option value="Norfolk Island">Norfolk Island</option>
+                                            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Palau">Palau</option>
+                                            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Pitcairn">Pitcairn</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Reunion">Reunion</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russian Federation">Russian Federation</option>
+                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="Saint Helena">Saint Helena</option>
+                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                            <option value="Saint Lucia">Saint Lucia</option>
+                                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                                            <option value="Samoa">Samoa</option>
+                                            <option value="San Marino">San Marino</option>
+                                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Serbia">Serbia</option>
+                                            <option value="Seychelles">Seychelles</option>
+                                            <option value="Sierra Leone">Sierra Leone</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="Solomon Islands">Solomon Islands</option>
+                                            <option value="Somalia">Somalia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sudan">Sudan</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                            <option value="Swaziland">Swaziland</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Tajikistan">Tajikistan</option>
+                                            <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Timor-leste">Timor-leste</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Tokelau">Tokelau</option>
+                                            <option value="Tonga">Tonga</option>
+                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Turkmenistan">Turkmenistan</option>
+                                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                            <option value="Tuvalu">Tuvalu</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                            <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                            <option value="Uruguay">Uruguay</option>
+                                            <option value="Uzbekistan">Uzbekistan</option>
+                                            <option value="Vanuatu">Vanuatu</option>
+                                            <option value="Venezuela">Venezuela</option>
+                                            <option value="Viet Nam">Viet Nam</option>
+                                            <option value="Virgin Islands, British">Virgin Islands, British</option>
+                                            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                            <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                            <option value="Western Sahara">Western Sahara</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Zambia">Zambia</option>
+                                            <option value="Zimbabwe">Zimbabwe</option>
+                                        </select>
+                                        <label class="floatingInput" for="validationCountry">
+                                            País de nacimiento
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Por favor, selecciona un país
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-1">
+                                        <input id="nationality" readonly value="Cubana" type="text" class="form-control" name="{{form.name.name}}">
+                                        <label for="nationality">
+                                            Nacionalidad
+                                        </label>
+                                    </div>
+                                    <div class="form-floating col-1">
+                                        <select id="civilState" class="form-control form-select" required>
+                                            <option selected disabled hidden></option>
+                                            <option value="">SOLTERO(A)</option>
+                                            <option value="">CASADO(A)</option>
+                                        </select>
+                                        <label for="civilState">Estado civil</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="row q-col-gutter-sm q-mb-md" data-v-2fcdc674="">
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--labeled q-field--dense"
-                                            for="f_c786015b-4887-4c6f-a88f-3350df40921f" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Nombre(s)"
-                                                            id="f_c786015b-4887-4c6f-a88f-3350df40921f" type="text">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Nombre(s)</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--labeled q-field--dense"
-                                            for="f_23e4b1ba-5d38-4272-ac5a-90e1266f6ca7" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Apellido(s)"
-                                                            id="f_23e4b1ba-5d38-4272-ac5a-90e1266f6ca7" type="text">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Apellido(s)</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-select q-field--auto-height q-select--without-input q-select--without-chips q-select--single q-field--labeled q-field--dense q-field--with-bottom"
-                                            for="f_f5efe013-29a2-4a52-9e72-7b5423d54eb6" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <div class="q-field__native row items-center">
-                                                            <span></span><input class="q-select__focus-target"
-                                                                id="f_f5efe013-29a2-4a52-9e72-7b5423d54eb6" readonly=""
-                                                                tabindex="0" role="combobox" aria-label="Sexo"
-                                                                aria-autocomplete="none" aria-expanded="false"
-                                                                aria-owns="f_f5efe013-29a2-4a52-9e72-7b5423d54eb6_lb"
-                                                                aria-controls="f_f5efe013-29a2-4a52-9e72-7b5423d54eb6_lb">
-                                                        </div>
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Sexo</div>
-                                                        <!---->
-                                                    </div>
-                                                    <div
-                                                        class="q-field__append q-field__marginal row no-wrap items-center q-anchor--skip">
-                                                        <i class="q-icon notranslate material-icons q-select__dropdown-icon"
-                                                            aria-hidden="true" role="presentation">arrow_drop_down</i>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div class="q-field__bottom row items-start q-field__bottom--animated">
-                                                    <div class="q-field__messages col"></div>
-                                                    <!---->
-                                                </div>
-                                            </div>
-                                            <!---->
-                                        </label></div>
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="Name" type="text" placeholder="Nombre(s)" class="form-control" name="{{form.name.name}}" required>
+                                        <label for="Name">
+                                            Nombre(s)
+                                        </label>
+                                    </div>
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="LastName" type="text" placeholder="Apellido(s)" class="form-control" name="{{form.last_name.name}}" required>
+                                        <label for="LastName">
+                                            Apellido(s)
+                                        </label>
+                                    </div>
+                                    <div class="form-floating col-1">
+                                        <select id="Genere" class="form-select" required>
+                                            <option selected disabled hidden></option>
+                                            <option value="">MASCULINO</option>
+                                            <option value="">FEMENINO</option>
+                                        </select>
+                                        <label for="Genere">Sexo</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row q-col-gutter-sm q-mb-md" data-v-2fcdc674="">
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--labeled q-field--dense q-field--with-bottom q-field--readonly"
-                                            for="f_97a6f71f-d8f1-4cd1-bd2a-69526be5e7d3" aria-readonly="true"
-                                            data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Fecha de Nacimiento"
-                                                            id="f_97a6f71f-d8f1-4cd1-bd2a-69526be5e7d3" readonly=""
-                                                            type="text">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Fecha de Nacimiento</div>
-                                                        <!---->
-                                                    </div>
-                                                    <div
-                                                        class="q-field__append q-field__marginal row no-wrap items-center">
-                                                        <i class="q-icon notranslate material-icons cursor-pointer"
-                                                            aria-hidden="true" role="presentation"
-                                                            data-v-2fcdc674="">event
-                                                            <!---->
-                                                        </i></div>
-                                                </div>
-                                                <div class="q-field__bottom row items-start q-field__bottom--animated">
-                                                    <div class="q-field__messages col"></div>
-                                                    <!---->
-                                                </div>
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--labeled q-field--dense"
-                                            for="f_5cbc4af9-a51b-441b-ae19-96c4c07b1c19" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Teléfono"
-                                                            id="f_5cbc4af9-a51b-441b-ae19-96c4c07b1c19" type="number">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Teléfono</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--float q-field--labeled q-field--dense"
-                                            for="f_eb5104f0-c6ad-4d9f-8ff0-60e69fbc6b7a" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Correo electrónico"
-                                                            id="f_eb5104f0-c6ad-4d9f-8ff0-60e69fbc6b7a" type="text">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Correo electrónico</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="BornDate" type="date" class="form-control" max="2000-01-01" required>
+                                        <label for="BornDate">
+                                            Fecha de Nacimiento
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="PhoneNumber" type="number" placeholder="Teléfono" class="form-control" required>
+                                        <label for="PhoneNumber">
+                                            Teléfono
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="Email" type="email" placeholder="Correo electrónico" class="form-control" name="{{form.email.name}}" required>
+                                        <label for="Email">
+                                            Correo electrónico
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="row q-col-gutter-sm q-mb-md" data-v-2fcdc674="">
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--float q-field--labeled q-field--dense"
-                                            for="f_0a475ceb-4e5a-4529-9d52-2a3ca4f55eb0" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Contraseña"
-                                                            id="f_0a475ceb-4e5a-4529-9d52-2a3ca4f55eb0" type="password">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Contraseña</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-input q-field--labeled q-field--dense"
-                                            for="f_ad0ff5a8-2f22-4111-98b7-87af1e4c053d" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <input class="q-field__native q-placeholder" tabindex="0"
-                                                            aria-label="Repetir Contraseña"
-                                                            id="f_ad0ff5a8-2f22-4111-98b7-87af1e4c053d" type="password">
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Repetir Contraseña</div>
-                                                        <!---->
-                                                    </div>
-                                                </div>
-                                                <!---->
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                </div><br data-v-2fcdc674="">
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="Password" type="password" placeholder="Contraseña" class="form-control" required>
+                                        <label for="Password">
+                                            Contraseña
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-1">
+                                        <input id="PasswordRepeat" type="password" placeholder="Repetir Contraseña" class="form-control" required>
+                                        <label for="PasswordRepeat">
+                                            Repetir Contraseña
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-1">
+
+                                    </div>
+                                </div>
                                 <div class="text-weight-bold section" data-v-2fcdc674=""> Información de trámite </div>
-                                <div class="row q-col-gutter-sm q-mb-md" data-v-2fcdc674="">
-                                    <div class="col-4" data-v-2fcdc674=""><label
-                                            class="q-field row no-wrap items-start q-field--outlined q-select q-field--auto-height q-select--without-input q-select--with-chips q-select--multiple q-field--labeled q-field--dense q-field--with-bottom"
-                                            for="f_b1a62a68-06f5-4a9e-913f-c29c9a0e81ff" data-v-2fcdc674="">
-                                            <!---->
-                                            <div class="q-field__inner relative-position col self-stretch">
-                                                <div class="q-field__control relative-position row no-wrap"
-                                                    tabindex="-1">
-                                                    <div
-                                                        class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                        <div class="q-field__native row items-center"><input
-                                                                class="q-select__focus-target"
-                                                                id="f_b1a62a68-06f5-4a9e-913f-c29c9a0e81ff" readonly=""
-                                                                tabindex="0" role="combobox"
-                                                                aria-label="Tipo de trámite" aria-autocomplete="none"
-                                                                aria-expanded="false"
-                                                                aria-owns="f_b1a62a68-06f5-4a9e-913f-c29c9a0e81ff_lb"
-                                                                aria-controls="f_b1a62a68-06f5-4a9e-913f-c29c9a0e81ff_lb">
-                                                        </div>
-                                                        <div class="q-field__label no-pointer-events absolute ellipsis">
-                                                            Tipo de trámite</div>
-                                                        <!---->
-                                                    </div>
-                                                    <div
-                                                        class="q-field__append q-field__marginal row no-wrap items-center q-anchor--skip">
-                                                        <i class="q-icon notranslate material-icons q-select__dropdown-icon"
-                                                            aria-hidden="true" role="presentation">arrow_drop_down</i>
-                                                    </div>
-                                                    <!---->
-                                                </div>
-                                                <div class="q-field__bottom row items-start q-field__bottom--animated">
-                                                    <div class="q-field__messages col"></div>
-                                                    <!---->
-                                                </div>
-                                            </div>
-                                            <!---->
-                                        </label></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating col-1">
+                                        <select id="TramitType" class="form-select" required>
+                                            <option value="0" hidden></option>
+                                            <option disabled value="1">LEGALIZACIONES Y VISADOS</option>
+                                            <option disabled value="2">VISA CON PERMISO DE INM</option>
+                                            <option selected value="3">VISA SIN PERMISO DE INM</option>
+                                        </select>
+                                        <label for="TramitType">Tipo de trámite</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-1 visatypecss">
+                                        <select id="VisaType" class="form-select" required>
+                                            <option selected disabled hidden>Tipo de Visa</option>
+                                            <option value="">VISA ESTUDIANTES</option>
+                                            <option value="">VISA BECARIOS CONACYT</option>
+                                            <option value="">VISA TURISMO Y TRÁNSITO</option>
+                                            <option value="">VISA VINCULO Y UNIDAD FAMILIAR</option>
+                                        </select>
+                                        <label for="VisaType">Tipo de Visa</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-1 passportcss">
+                                        <input id="Passport" type="text" placeholder="Pasaporte" class="form-control" name="{{form.passport.name}}" required>
+                                        <label for="Passport">Pasaporte</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
                                 </div>
-                                <!---->
-                                <div class="row q-pa-md justify-end q-gutter-xs" data-v-2fcdc674="">
-                                    <div class="col-5 col-md-3" data-v-2fcdc674=""><a
-                                            class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-grey text-white q-btn--actionable q-focusable q-hoverable"
-                                            tabindex="0" href="/" data-v-2fcdc674="" style="width: 100%;"><span
-                                                class="q-focus-helper"></span><span
-                                                class="q-btn__content text-center col items-center q-anchor--skip justify-center row">
-                                                CANCELAR </span></a></div>
-                                    <div class="col-5 col-md-3" data-v-2fcdc674=""><button
-                                            class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle q-btn--actionable q-focusable q-hoverable full-width"
-                                            tabindex="0" type="submit" data-v-2fcdc674=""
-                                            style="background: rgb(157, 36, 73); color: whitesmoke;"><span
-                                                class="q-focus-helper"></span><span
-                                                class="q-btn__content text-center col items-center q-anchor--skip justify-center row">
-                                                Crear Cuenta </span></button></div>
+                                <div class="input-group row g-3 mb-3">
+                                    <div class="form-floating col-1">
+                                        <input type="date" id="appointmentdate" class="form-control" max="2023-01-31" name="{{form.appointment_date.name}}" required>
+                                        <label for="appointmentdate">Fecha de Cita</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-1">
+                                        <input type="time" id="appointmenthour" class="form-control" name="{{form.appointment_hour.name}}" required>
+                                        <label for="appointmenthour">Hora de Cita</label>
+                                        <div class="invalid-feedback">
+                                            Este es un campo requerido
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="row q-pa-md justify-end q-gutter-xs">
+                                    <a class="btn btn-secondary col-5 col-md-3" href="/">CANCELAR</a>
+                                    <button class="btn btn-danger col-5 col-md-3 " type="submit">CREAR CUENTA</button>
+                                    
+                                  </div>
                             </form>
+
+                            {% endblock %}
                         </div>
                     </div>
                 </div>
@@ -509,23 +571,11 @@
             <div class="q-notifications__list q-notifications__list--center fixed column no-wrap flex-center"></div>
         </div>
     </div>
-    <script>mendeleyWebImporter = {
-            downloadPdfs(e, t) { return this._call('downloadPdfs', [e, t]); },
-            open() { return this._call('open', []); },
-            setLoginToken(e) { return this._call('setLoginToken', [e]); },
-            _call(methodName, methodArgs) {
-                const id = Math.random();
-                window.postMessage({ id, token: '0.49134642622923796', methodName, methodArgs }, 'https://citascuba.sre.gob.mx');
-                return new Promise(resolve => {
-                    const listener = window.addEventListener('message', event => {
-                        const data = event.data;
-                        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
-                        window.removeEventListener('message', listener);
-                        resolve(data.result);
-                    });
-                });
-            }
-        };</script>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static "/toast.js" %}"></script>
+
 </body>
 
 </html>

@@ -1,1 +1,71 @@
-.footer[data-v-6ffbcd8b]{background-color:#13322b;color:#fff;font-size:16px;font-weight:500;min-height:56px;padding:0;text-align:left}.logo_footer[data-v-6ffbcd8b]{margin-left:5%;margin-top:30%}ul li[data-v-6ffbcd8b]{font-weight:700;line-height:110%;list-style-type:none;margin:0 0 2px;padding:0}li a[data-v-6ffbcd8b]{color:#f5f5f5;text-decoration:none}.footer-pleca[data-v-58f74857][data-v-6ffbcd8b]{background-color:#12322b;background-image:url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);background-repeat:repeat-x}
+.footer[data-v-6ffbcd8b] {
+    background-color: #13322b;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    min-height: 56px;
+    padding: 0;
+    text-align: left
+}
+
+.logo_footer[data-v-6ffbcd8b] {
+    margin-left: 5%;
+    margin-top: 30%
+}
+
+ul li[data-v-6ffbcd8b] {
+    font-weight: 700;
+    line-height: 110%;
+    list-style-type: none;
+    margin: 0 0 2px;
+    padding: 0
+}
+
+li a[data-v-6ffbcd8b] {
+    color: #f5f5f5;
+    text-decoration: none
+}
+.pages-padding {
+    padding: 2%;
+}
+body{
+    background: #f5f5fa;
+    margin: 0;
+    padding-top: 0!important;
+    font-family: Montserrat,serif!important;
+}
+
+.text-h6 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .0125em;
+    line-height: 2rem;
+    font-family: Montserrat,serif!important;
+}
+
+b{
+    font-family: Montserrat,serif!important;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .0125em;
+    line-height: 2rem;
+}
+.q-toolbar {
+    min-height: 50px;
+    padding: 0 22px;
+    position: relative;
+    width: 100%;
+}
+.text-weight-bold{
+    border-bottom: 1px solid #d3d3d3;
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.footer-pleca[data-v-58f74857][data-v-6ffbcd8b] {
+    background-color: #12322b;
+    background-image: url(https://framework-gb.cdn.gob.mx/landing/img/pleca.svg);
+    background-repeat: repeat-x
+}
+

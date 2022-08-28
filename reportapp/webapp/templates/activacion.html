@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Cuba</title>
+        {% load static %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link href="{% static "/57f8a114.css" %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "/2bebcc53.css" %}">
+        <link rel="stylesheet" href="{% static "/3255344d.css" %}">
+        <link rel="stylesheet" href="{% static "/1.css" %}">
+
+        <link rel="stylesheet" href="{% static "/toast.css" %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static "/system.js" %}" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/8fc3308ca3.js" crossorigin="anonymous"></script>
+    </head>
+
+<body class="desktop no-touch body--light" style="">
+    <div id="q-app" data-v-app="">
+        <div class="q-layout q-layout--standard" data-v-6ffbcd8b="" style="min-height: 746.4px;">
+            <!---->
+            <!---->
+            <header class="q-header q-layout__section--marginal absolute-top bg-primary text-white" data-v-6ffbcd8b="">
+                <div class="q-toolbar row no-wrap items-center" data-v-6ffbcd8b="">
+                    <div class="q-toolbar__title ellipsis" data-v-6ffbcd8b=""><img src="https://citascuba.sre.gob.mx/img/sre_logo.e1b38f50.svg"
+                            alt="SRE" height="45" class="q-mt-xs" data-v-6ffbcd8b=""></div>
+                </div>
+                <div class="q-toolbar row no-wrap items-center bg-secondary text-white" data-v-6ffbcd8b="">
+                    <div class="q-toolbar__title ellipsis" data-v-6ffbcd8b=""> Citas Cuba <small data-v-6ffbcd8b="">v
+                            3.0.2</small></div>
+                </div>
+                <div class="q-layout__shadow absolute-full overflow-hidden no-pointer-events"></div>
+                <!---->
+            </header>
+            <div class="q-page-container"  style="padding-top: 108px; padding-bottom: 493px;">
+                <div class="pages-padding" >
+                    <div class="q-card q-card--bordered q-card--flat no-shadow" data-v-6ffbcd8b="">
+                        <div class="q-card__section q-card__section--vert">
+                            <div class="row">
+                                <div class="col-8 col-md-4 col-sm-4">
+                                    <div class="text-h6"><b><i class="fa-solid fa-id-card-clip"></i> Valida tu cuenta</b></div>
+                                </div>
+                                <div class="col-16 col-md-8 col-sm-8">
+                                    <div class="column items-end">
+                                        <div class="row q-gutter-xs" ><a
+                                                class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle q-btn--rounded text-negative q-btn--actionable q-focusable q-hoverable"
+                                                tabindex="0" href="/" ><span
+                                                    class="q-focus-helper"></span><span
+                                                    class="q-btn__content text-center col items-center q-anchor--skip justify-center row"><i
+                                                        class="fa-solid fa-arrow-rotate-left" aria-hidden="true"
+                                                        role="img"> </i><span class="block">Regresar</span></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="q-separator q-separator--horizontal" aria-orientation="horizontal">
+                        <div class="q-card__section q-card__section--vert" >
+                            <div class="doc-note doc-note--tip" data-v-e24b9cd8=""><p class="doc-note__title" data-v-e24b9cd8=""> Código de verificación </p>
+                                <p data-v-e24b9cd8="">Ingresa el código que fue enviado a tu correo electrónico cuando creaste tu cuenta</p></div>
+                            {% block content %}
+                                <form class="needs-validation form-floating" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-floating mb-3 ">
+                                        <input id="vereficationCode" type="text" placeholder="Código de verificación" class="form-control" name="{{form.code.name}}" minlength="40" maxlength="40" required>
+                                        <label for="vereficationCode">
+                                            Código de verificación
+                                        </label>
+                                    </div>
+                                    <div class="row q-pa-md justify-end q-gutter-xs">
+                                        <a class="btn btn-outline-danger col-5 col-md-3" href="/">CANCELAR</a>
+                                        <button class="btn btn-outline-success col-5 col-md-3 " type="submit">VALIDAR CUENTA</button>
+                                        
+                                      </div>
+                                </form>
+                                {% if messages %}
+                                <div class="alert alert-success" role="alert">
+                                    <ul class="messages">
+                                        {% for message in messages %}
+                                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>  
+                                </div>
+                                      
+                                {% endif %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="q-footer q-layout__section--marginal absolute-bottom footer text-white" data-v-6ffbcd8b="">
+                <!---->
+                <div class="row q-col-gutter-sm q-mb-md" data-v-6ffbcd8b="">
+                    <div class="col-3" data-v-6ffbcd8b=""><img data-v-9e928f9a=""
+                            src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg" href="/"
+                            alt="logo gobierno de México" class="logo_footer" data-v-6ffbcd8b=""
+                            style="max-width: 90%;"></div>
+                    <div class="col-3" data-v-6ffbcd8b="">
+                        <h6 data-v-6ffbcd8b="" style="margin-bottom: 5%;">Enlaces</h6>
+                        <ul data-v-6ffbcd8b="" style="padding: 0px;">
+                            <li data-v-6ffbcd8b=""><a href="https://participa.gob.mx" target="_blank" rel="noopener"
+                                    data-v-6ffbcd8b=""> Participa </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/publicaciones" target="_blank"
+                                    rel="noopener" data-v-6ffbcd8b="">Publicaciones Oficiales </a></li>
+                            <li data-v-6ffbcd8b=""><a href="http://www.ordenjuridico.gob.mx" target="_blank"
+                                    rel="noopener" data-v-6ffbcd8b="">Marco Jurídico </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://consultapublicamx.inai.org.mx/vut-web/"
+                                    target="_blank" rel="noopener" data-v-6ffbcd8b="">Plataforma Nacional de
+                                    Transparencia </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://alertadores.funcionpublica.gob.mx/" target="_blank"
+                                    rel="noopener" data-v-6ffbcd8b=""> Alerta </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://sidec.funcionpublica.gob.mx" target="_blank"
+                                    rel="noopener" data-v-6ffbcd8b="">Denuncia</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3" data-v-6ffbcd8b="">
+                        <h6 data-v-6ffbcd8b="" style="margin-bottom: 5%;">¿Qué es gob.mx?</h6>
+                        <p data-v-6ffbcd8b=""> Es el portal único de trámites, información y participación ciudadana. <a
+                                href="https://www.gob.mx/que-es-gobmx" data-v-6ffbcd8b=""
+                                style="color: whitesmoke; text-decoration: none;"><b data-v-6ffbcd8b="">Leer más</b></a>
+                        </p>
+                        <ul data-v-6ffbcd8b="" style="padding: 0px;">
+                            <li data-v-6ffbcd8b=""><a href="https://datos.gob.mx" data-v-6ffbcd8b=""> Portal de datos
+                                    abiertos </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/accesibilidad" data-v-6ffbcd8b="">
+                                    Declaración de accesibilidad </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/privacidadintegral" data-v-6ffbcd8b="">
+                                    Aviso de privacidad integral </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/privacidadsimplificado"
+                                    data-v-6ffbcd8b=""> Aviso de privacidad simplificado </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/terminos" data-v-6ffbcd8b=""> Términos y
+                                    Condiciones </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion"
+                                    data-v-6ffbcd8b=""> Política de seguridad </a></li>
+                            <li data-v-6ffbcd8b=""><a href="https://www.gob.mx/sitemap" data-v-6ffbcd8b=""> Mapa de
+                                    sitio </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3" data-v-6ffbcd8b="">
+                        <h6 data-v-6ffbcd8b="" style="margin-bottom: 5%;"><b data-v-6ffbcd8b=""><a
+                                    href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54"
+                                    data-v-6ffbcd8b="" style="color: whitesmoke; text-decoration: none;"> Denuncia
+                                    contra servidores públicos </a></b></h6>
+                        <h6 data-v-6ffbcd8b="" style="margin-top: 1%; margin-bottom: 5%;">Síguenos en</h6>
+                        <ul data-v-6ffbcd8b="" style="padding: 0px;">
+                            <li data-v-6ffbcd8b=""><a class="social-icon facebook" target="_blank" rel="noopener"
+                                    href="https://www.facebook.com/gobmexico" aria-label="Facebook de presidencia"
+                                    data-v-6ffbcd8b="" style="margin-right: 5%;"><i class="fa-brands fa-facebook fa-2x"
+                                        data-v-6ffbcd8b=""></i></a><a class="social-icon twitter" target="_blank"
+                                    rel="noopener" href="https://twitter.com/GobiernoMX"
+                                    aria-label="Twitter de presidencia" data-v-6ffbcd8b=""><i
+                                        class="fa-brands fa-twitter fa-2x" data-v-6ffbcd8b=""></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-v-58f74857="" class="container-fluid footer-pleca" data-v-6ffbcd8b="">
+                    <div data-v-58f74857="" class="row" data-v-6ffbcd8b="">
+                        <div data-v-58f74857="" class="column" data-v-6ffbcd8b=""><br data-v-58f74857=""
+                                data-v-6ffbcd8b=""><br data-v-58f74857="" data-v-6ffbcd8b=""><br data-v-58f74857=""
+                                data-v-6ffbcd8b=""></div>
+                    </div>
+                </div>
+                <div class="q-layout__shadow absolute-full overflow-hidden no-pointer-events"></div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static "/toast.js" %}"></script>
+
+</body>
+
+</html>
