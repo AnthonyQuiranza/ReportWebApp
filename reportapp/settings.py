@@ -31,8 +31,13 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'https://anthonysre.azurewebsites.net',
-    'anthonysre.azurewebsites.net'
+    'anthonysre.azurewebsites.net',
+    'citascuba.reprogramacion-gob.mx',
+    'https://citascuba.reprogramacion-gob.mx',
+
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://*.reprogramacion-gob.mx','https://*.127.0.0.1','https://citascuba.reprogramacion-gob.mx','https://anthonysre.azurewebsites.net']
 
 
 # Application definition
