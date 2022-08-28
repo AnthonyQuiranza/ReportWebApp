@@ -1,0 +1,30 @@
+.new-code[data-v-a4655354] {
+    color: #0199c9;
+    cursor: pointer;
+    float: right !important;
+    text-align: right;
+    text-decoration: underline
+}
+
+.doc-note[data-v-a4655354] {
+    background-color: #f5f5f5;
+    border-color: #eee;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0 5px;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 1.35em;
+    margin: 16px 0;
+    padding: 16px 24px
+}
+
+.doc-note--warning[data-v-a4655354] {
+    background-color: #fcf2d7;
+    border-color: #f9e09b
+}
+
+.doc-note--danger[data-v-a4655354] {
+    background-color: #ffdfe3;
+    border-color: #ff808e
+}
