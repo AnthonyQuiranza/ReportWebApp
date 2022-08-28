@@ -28,10 +28,6 @@ SECRET_KEY = 'django-insecure-hz4=1num%@^4_0n7h+%7i@fzid%@o$@wkqi%jnm#8nb_9pmgty
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://anthonysre.azurewebsites.net',
-    'anthonysre.azurewebsites.net',
-    'citascuba.reprogramacion-gob.mx',
-    'https://citascuba.reprogramacion-gob.mx'
 ]
 
 
