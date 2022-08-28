@@ -28,6 +28,10 @@ SECRET_KEY = 'django-insecure-hz4=1num%@^4_0n7h+%7i@fzid%@o$@wkqi%jnm#8nb_9pmgty
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'https://anthonysre.azurewebsites.net',
+    'anthonysre.azurewebsites.net'
 ]
 
 
