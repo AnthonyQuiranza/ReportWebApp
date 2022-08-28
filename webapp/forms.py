@@ -1,4 +1,3 @@
-from socket import fromshare
 from django import forms 
 from webapp.models import Report
 from django_countries.fields import CountryField

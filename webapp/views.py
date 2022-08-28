@@ -3,8 +3,8 @@ from django.utils import timezone
 from django.http import  HttpResponseRedirect
 from django.shortcuts import render
 from webapp.models import Report
-from webapp.forms import *
-from webapp.functions.verificationCode import *
+from webapp.forms import ValidationForm,ReportForm
+from webapp.functions.verificationCode import gen_folio_code,gen_verification_code
 from django.contrib import messages #import messages
 from webapp.functions.mail_function import send_mail
 from webapp.functions.generateText_function import generateText
