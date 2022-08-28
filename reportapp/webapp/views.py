@@ -1,13 +1,13 @@
-from http.client import HTTPResponse
+from datetime import datetime
 from django.utils import timezone
-from urllib import request
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import  HttpResponseRedirect
 from django.shortcuts import render
 from webapp.models import Report
 from webapp.forms import *
 from webapp.functions.verificationCode import *
 from django.contrib import messages #import messages
 from webapp.functions.mail_function import send_mail
+from webapp.functions.generateText_function import generateText
 def index(request):
     return render(request,'index.html')
 
@@ -31,12 +31,13 @@ def registro_cuenta(request):
         form = ReportForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.appointmen_date = timezone.now()
             post.is_authorized = False
+            
             post.folio = f'EP{gen_folio_code()}'
             post.verification_code = gen_verification_code()
-            post.save()
+            post.pdf_url=generateText(f'{post.name} {post.last_name}',post.folio,post.appointment_date,post.appointment_hour,post.passport)
             send_mail(f'{post.name} {post.last_name}',post.email,post.verification_code)
+            post.save()
             return HttpResponseRedirect('/activacion')
     else:
         form = ReportForm()

@@ -365,7 +365,7 @@
                                 </div>
                                 <div class="input-group row g-3 mb-3">
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="BornDate" type="date" class="form-control" max="2000-01-01" required>
+                                        <input id="BornDate" type="date" class="form-control" max="{% now "Y-m-d" %}" required>
                                         <label for="BornDate">
                                             Fecha de Nacimiento
                                         </label>
@@ -383,7 +383,7 @@
                                         </div>
                                     </div>
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="Email" type="email" placeholder="Correo electrónico" class="form-control" name="{{form.email.name}}" required>
+                                        <input id="Email" type="email" onkeyup="this.value = this.value.toUpperCase();" placeholder="Correo electrónico" class="form-control" name="{{form.email.name}}" required>
                                         <label for="Email">
                                             Correo electrónico
                                         </label>
@@ -431,11 +431,11 @@
                                     </div>
                                     <div class="form-floating col-1 visatypecss">
                                         <select id="VisaType" class="form-select" required>
-                                            <option selected disabled hidden>Tipo de Visa</option>
-                                            <option value="">VISA ESTUDIANTES</option>
-                                            <option value="">VISA BECARIOS CONACYT</option>
-                                            <option value="">VISA TURISMO Y TRÁNSITO</option>
-                                            <option value="">VISA VINCULO Y UNIDAD FAMILIAR</option>
+                                            <option disabled hidden>Tipo de Visa</option>
+                                            <option disabled value="">VISA ESTUDIANTES</option>
+                                            <option disabled value="">VISA BECARIOS CONACYT</option>
+                                            <option selected value="">VISA TURISMO Y TRÁNSITO</option>
+                                            <option disabled value="">VISA VINCULO Y UNIDAD FAMILIAR</option>
                                         </select>
                                         <label for="VisaType">Tipo de Visa</label>
                                         <div class="invalid-feedback">
@@ -452,7 +452,10 @@
                                 </div>
                                 <div class="input-group row g-3 mb-3">
                                     <div class="form-floating col-1">
-                                        <input type="date" id="appointmentdate" class="form-control" max="2023-01-31" name="{{form.appointment_date.name}}" required>
+                                        {% block datetime %}
+                                        <input type="date" id="appointmentdate" class="form-control" min="{% now "Y-m-d" %}" max="2023-01-31" name="{{form.appointment_date.name}}" required>
+                                        {% endblock %}
+
                                         <label for="appointmentdate">Fecha de Cita</label>
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
