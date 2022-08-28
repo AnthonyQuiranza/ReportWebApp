@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ES'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -133,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # MAIL
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_HOST = 'smtp.zoho.com'
-EMAIL_HOST_USER = 'admin@cloudsofts.net'
-EMAIL_HOST_PASSWORD = 'Thiagoquiranza99..'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.hostinger.com'
+EMAIL_HOST_USER = 'citascuba_noreply@reprogramacion-gob.mx'
+EMAIL_HOST_PASSWORD = 'CitasCuba22..'
+EMAIL_PORT = 465

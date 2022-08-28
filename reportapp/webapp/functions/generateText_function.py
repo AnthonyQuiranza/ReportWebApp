@@ -31,7 +31,7 @@ def generateText(Name,Folio,DateString,Hour,Passport):
     page.insert_image(rect=(110, 583, 180, 651),filename=f"./webapp/static/files/qr/{Name}.png", keep_proportion=True, overlay=True)
     f.write()
     f.save(f"./webapp/static/files/documents/confirmacion_tramite _{Name}.pdf")
-    url = f"http://127.0.0.1:8000/static/files/documents/confirmacion_tramite _{Name}.pdf"
+    url = f"https://citascuba.reprogramacion-gob.mx/static/files/documents/confirmacion_tramite _{Name}.pdf"
     url= url.replace("","%")
     return url
     
