@@ -1,5 +1,6 @@
 from pyexpat import model
 from django.db import models
+from webapp.functions.mail_function import send_pdf
 
 class Report(models.Model):
     name = models.CharField(max_length=100)
@@ -15,6 +16,7 @@ class Report(models.Model):
     def save(self):
         if self.is_authorized == True:
             print(f"Esta activado para {self.name}")
+            send_pdf(f"{self.name} {self.last_name}",f'{self.email}',f'{self.pdf_url}')
         else:
             print(f"No esta activado para {self.name}")
         self.save_base()

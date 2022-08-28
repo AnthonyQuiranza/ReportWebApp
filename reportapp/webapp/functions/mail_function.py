@@ -19,3 +19,20 @@ def send_mail(username,mail,verificationcode):
 
     message.attach_alternative(content, 'text/html')
     message.send()
+
+def send_pdf(username,mail,urldoc):
+    subject = 'Confirmación de cita'
+    template = get_template('pdf_mail.html')
+
+    content = template.render({
+        'username': username,
+        'urldoc': urldoc
+    })
+
+    message = EmailMultiAlternatives(subject, #Titulo
+                                    '',
+                                    settings.EMAIL_HOST_USER, #Remitente
+                                    [mail]) #Destinatario
+
+    message.attach_alternative(content, 'text/html')
+    message.send()
