@@ -8,6 +8,7 @@ from webapp.functions.mail_function import send_mail
 from webapp.functions.generateText_function import generateText
 def index(request):
     exist_account=False
+    exist_email = False
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -18,10 +19,10 @@ def index(request):
                     messages.success(request,f'Hola {i[1]} {i[2]} su cita ha sido aprobada, por favor revise su correo.')
                 elif i[4] == request.POST.get('email') and i[8]==False:
                     print('Existe el correo y NO ESTÁ APROBADO')
-                    exist_account=True
+                    exist_email=True
                     messages.warning(request,f'Hola {i[1]} {i[2]} su cita aún no ha sido aprobada.')
-                elif exist_account == False :
-                    messages.error(request,'No existe una cuenta asociada a los datos ingresados.')
+                elif exist_account == False and exist_email == False :
+                    messages.error(request,'No existe una cuenta asociada con los datos ingresados.')
     else:
         form = LoginForm()
     return render(request,'index.html', {'form':form})
