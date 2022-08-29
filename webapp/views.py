@@ -1,15 +1,30 @@
-from datetime import datetime
-from django.utils import timezone
 from django.http import  HttpResponseRedirect
 from django.shortcuts import render
 from webapp.models import Report
-from webapp.forms import ValidationForm,ReportForm
+from webapp.forms import ValidationForm,ReportForm,LoginForm
 from webapp.functions.verificationCode import gen_folio_code,gen_verification_code
 from django.contrib import messages #import messages
 from webapp.functions.mail_function import send_mail
 from webapp.functions.generateText_function import generateText
 def index(request):
-    return render(request,'index.html')
+    exist_account=False
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            for i in Report.objects.values_list():
+                if i[4] == request.POST.get('email') and i[8]==True:
+                    print('Existe el correo y esta aprobado')
+                    exist_account=True
+                    messages.success(request,f'Hola {i[1]} {i[2]} su cita ha sido aprobada, por favor revise su correo.')
+                elif i[4] == request.POST.get('email') and i[8]==False:
+                    print('Existe el correo y NO ESTÁ APROBADO')
+                    exist_account=True
+                    messages.warning(request,f'Hola {i[1]} {i[2]} su cita aún no ha sido aprobada.')
+                elif exist_account == False :
+                    messages.error(request,'No existe una cuenta asociada a los datos ingresados.')
+    else:
+        form = LoginForm()
+    return render(request,'index.html', {'form':form})
 
 def activacion(request):
     if request.method=="POST":
@@ -17,7 +32,7 @@ def activacion(request):
         if form.is_valid():
             if Report.objects.filter(verification_code=request.POST.get('code')):
                 print("existe el dato")
-                messages.success(request, 'Se ha comprobado su código de verificación, recibirá su cita en su correo cuando esté aprobada')
+                messages.success(request,'Se ha comprobado su código de verificación, recibirá su cita en su correo cuando esté aprobada')
             else:
                 print("No se encontro el dato")
                 messages.error(request,"El código de verificación que ha ingresado es incorrecto, por favor verifique y vuelva a intentarlo.")

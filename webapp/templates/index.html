@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Cuba</title>
-    <link rel="icon" type="image/png" sizes="128x128" href="https://citascuba.sre.gob.mx/icons/favicon-128x128.png">
-    {% load static %}
-    <link href="{% static "/57f8a114.css" %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "/2bebcc53.css" %}">
-    <link rel="stylesheet" href="{% static "/3255344d.css" %}">
-    <script src="https://kit.fontawesome.com/8fc3308ca3.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portal Cuba</title>
+        <link rel="icon" type="image/png" sizes="128x128" href="https://citascuba.sre.gob.mx/icons/favicon-128x128.png">
+        {% load static %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <link href="{% static "/57f8a114.css" %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "/2bebcc53.css" %}">
+        <link rel="stylesheet" href="{% static "/3255344d.css" %}">
+        <link rel="stylesheet" href="{% static "/1.css" %}">
 
-</head>
+        <link rel="stylesheet" href="{% static "/toast.css" %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static "/system.js" %}" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/8fc3308ca3.js" crossorigin="anonymous"></script>
+    </head>
 
 <body class="desktop no-touch body--light" style="">
     <div id="q-app" data-v-app="">
@@ -44,10 +50,10 @@
                                              Iniciar Sesión</b>
                                     </div>
                                 </div>
-                                <div class="col-16 col-md-8 col-sm-8">
+                                <div class="col-16 col-md-8 col-sm-8" >
                                     <div class="column items-end">
-                                        <div class="row q-gutter-xs" data-v-a4655354=""><img
-                                                src="https://citascuba.sre.gob.mx/img/mi_consulado.87b11ce0.png" alt="Mi Consulado" width="125"
+                                        <div class="q-gutter-xs" data-v-a4655354=""><img
+                                                src="https://citascuba.sre.gob.mx/img/mi_consulado.87b11ce0.png" alt="Mi Consulado" width="125px"
                                                 data-v-a4655354=""></div>
                                     </div>
                                 </div>
@@ -58,8 +64,17 @@
                             <div class="q-item q-item-type row no-wrap" data-v-a4655354="">
                                 <div class="q-item__section column q-item__section--main justify-center"
                                     data-v-a4655354="">
-                                    <form class="q-form q-gutter-md" autocorrect="off" autocapitalize="off"
-                                        autocomplete="off" spellcheck="false" data-v-a4655354="">
+                                    {% block content %}
+                                    <form class="needs-validation form-floating" method="post">
+                                        {% csrf_token %}
+                                        {% if messages %}
+                                        {% for message in messages %}
+                                        <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                                            {{ message }}
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                        {% endfor %}
+                                        {% endif %}
                                         <div class="row q-pa-md q-col-gutter-xs" data-v-a4655354="">
                                             <div class="col-6 offset-3" data-v-a4655354="">
                                                 <div class="doc-note doc-note--warning" data-v-a4655354="">
@@ -73,67 +88,30 @@
                                                         programación de citas. </p>
                                                 </div>
                                                 <!---->
-                                                <div class="q-item__label q-item__label--caption text-caption"
-                                                    data-v-a4655354=""><label
-                                                        class="q-field row no-wrap items-start q-field--outlined q-input q-field--float q-field--labeled q-field--dense q-field--with-bottom"
-                                                        for="f_628eb840-3f76-415a-82f3-40ca2d0f6e33" data-v-a4655354="">
-                                                        <!---->
-                                                        <div class="q-field__inner relative-position col self-stretch">
-                                                            <div class="q-field__control relative-position row no-wrap"
-                                                                tabindex="-1">
-                                                                <div
-                                                                    class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                                    <input class="q-field__native q-placeholder"
-                                                                        tabindex="0"
-                                                                        aria-label="Ingresa tu correo electrónico"
-                                                                        id="f_628eb840-3f76-415a-82f3-40ca2d0f6e33"
-                                                                        type="text">
-                                                                    <div
-                                                                        class="q-field__label no-pointer-events absolute ellipsis">
-                                                                        Ingresa tu correo electrónico</div>
-                                                                    <!---->
-                                                                </div>
-                                                            </div>
-                                                            <div
-                                                                class="q-field__bottom row items-start q-field__bottom--animated">
-                                                                <div class="q-field__messages col"></div>
-                                                                <!---->
-                                                            </div>
+                                                <div class="form-floating">
+                                                    <div class="mb-3 form-floating">
+                                                        <input id="Email" type="email" onkeyup="this.value = this.value.toUpperCase();" placeholder="Correo electrónico"
+                                                        class="form-control" name="{{form.email.name}}" required>
+                                                    <label for="Email">
+                                                        Ingresa tu correo electrónico
+                                                    </label>
+                                                    <div class="invalid-feedback">
+                                                        Este es un campo requerido
+                                                    </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <div class="input-group form-floating">
+                                                            <input id="Password" type="password" placeholder="Ingresa tu contraseña" class="form-control" required>
+                                                            <label for="Password">Ingresa tu contraseña</label>
+                                                            <button id="show_password" class="btn btn-light" type="button" onclick="mostrarPassword()"> <span
+                                                                    class="fa fa-eye-slash icon"></span> </button>
                                                         </div>
+                                                    </div>
+                                                    <p class="new-code" data-v-a4655354=""> Olvide mi contraseña </p>
+                                                </div>
                                                         <!---->
                                                     </label></div>
-                                                <div class="q-item__label q-item__label--caption text-caption"
-                                                    data-v-a4655354=""><label
-                                                        class="q-field row no-wrap items-start q-field--outlined q-input q-field--float q-field--labeled q-field--dense q-field--with-bottom"
-                                                        for="f_4fd94837-a7bd-473d-9185-e1132fff88e0" data-v-a4655354="">
-                                                        <!---->
-                                                        <div class="q-field__inner relative-position col self-stretch">
-                                                            <div class="q-field__control relative-position row no-wrap"
-                                                                tabindex="-1">
-                                                                <div
-                                                                    class="q-field__control-container col relative-position row no-wrap q-anchor--skip">
-                                                                    <input class="q-field__native q-placeholder"
-                                                                        tabindex="0" aria-label="Ingresa tu contraseña"
-                                                                        id="f_4fd94837-a7bd-473d-9185-e1132fff88e0"
-                                                                        type="password">
-                                                                    <div
-                                                                        class="q-field__label no-pointer-events absolute ellipsis">
-                                                                        Ingresa tu contraseña</div>
-                                                                    <!---->
-                                                                </div>
-                                                                <div
-                                                                    class="q-field__append q-field__marginal row no-wrap items-center">
-                                                                    <i class="fa-solid fa-eye-slash"></i></div>
-                                                            </div>
-                                                            <div
-                                                                class="q-field__bottom row items-start q-field__bottom--animated">
-                                                                <div class="q-field__messages col"></div>
-                                                                <!---->
-                                                            </div>
-                                                        </div>
-                                                        <!---->
-                                                    </label></div>
-                                                <p class="new-code" data-v-a4655354=""> Olvide mi contraseña </p>
+                                                
                                             </div>
                                             <div class="col-6 offset-3" data-v-a4655354=""><a href="./registro-cuenta"
                                                     class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle bg-grey text-white q-btn--actionable q-focusable q-hoverable"
@@ -141,7 +119,8 @@
                                                     style="font-size: 14px; width: 49%; margin-right: 1%;"><span
                                                         class="q-focus-helper"></span><span
                                                         class="q-btn__content text-center col items-center q-anchor--skip justify-center row">
-                                                        Crear tu cuenta </span></a><button
+                                                        Crear tu cuenta </span></a>
+                                                    <button type="submit"
                                                     class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--rectangle q-btn--actionable q-focusable q-hoverable"
                                                     tabindex="0" type="submit" data-v-a4655354=""
                                                     style="font-size: 14px; width: 49%; background: rgb(157, 36, 73); color: whitesmoke;"><span
@@ -150,6 +129,7 @@
                                                         Iniciar Sesión </span></button></div>
                                         </div>
                                     </form>
+                                    {% endblock %}
                                 </div>
                             </div>
                         </div>
@@ -251,23 +231,25 @@
             <div class="q-notifications__list q-notifications__list--center fixed column no-wrap flex-center"></div>
         </div>
     </div>
-    <script>mendeleyWebImporter = {
-            downloadPdfs(e, t) { return this._call('downloadPdfs', [e, t]); },
-            open() { return this._call('open', []); },
-            setLoginToken(e) { return this._call('setLoginToken', [e]); },
-            _call(methodName, methodArgs) {
-                const id = Math.random();
-                window.postMessage({ id, token: '0.29938747063752635', methodName, methodArgs }, 'https://citascuba.sre.gob.mx');
-                return new Promise(resolve => {
-                    const listener = window.addEventListener('message', event => {
-                        const data = event.data;
-                        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
-                        window.removeEventListener('message', listener);
-                        resolve(data.result);
-                    });
-                });
-            }
-        };</script>
+    <script type="text/javascript">
+        function mostrarPassword(){
+                var cambio = document.getElementById("Password");
+                if(cambio.type == "password"){
+                    cambio.type = "text";
+                    $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+                }else{
+                    cambio.type = "password";
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                }
+            } 
+            
+            $(document).ready(function () {
+            //CheckBox mostrar contraseña
+            $('#ShowPassword').click(function () {
+                $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
+        </script>
 </body>
 
 </html>

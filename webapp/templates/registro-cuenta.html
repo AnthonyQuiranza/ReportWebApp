@@ -324,6 +324,7 @@
                                         <div class="invalid-feedback">
                                             Por favor, selecciona un país
                                         </div>
+                                        
                                     </div>
                                     <div class="form-floating col-1">
                                         <input id="nationality" readonly value="Cubana" type="text" class="form-control" name="{{form.name.name}}">
@@ -396,26 +397,34 @@
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
                                         </div>
+                                        
+                                        <ul style="color:red ;">{{ form.email.errors }}</ul>
+                                        
                                     </div>
                                 </div>
                                 <div class="input-group row g-3 mb-3">
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="Password" type="password" placeholder="Contraseña" class="form-control" required>
-                                        <label for="Password">
-                                            Contraseña
-                                        </label>
+                                        <div class="input-group">
+                                            
+                                            <input id="Password" type="password" placeholder="Contraseña" class="form-control" required>
+                                            
+                                            <button id="show_password" class="btn btn-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                                        
+                                        </div>
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
                                         </div>
+                                        
                                     </div>
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="PasswordRepeat" type="password" placeholder="Repetir Contraseña" class="form-control" required>
-                                        <label for="PasswordRepeat">
-                                            Repetir Contraseña
-                                        </label>
+                                        <div class="input-group">
+                                            <input id="PasswordRepeat" type="password" placeholder="Repetir Contraseña" class="form-control" required>
+                                        
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
                                         </div>
+                                        </div>
+                                        
                                     </div>
                                     <div class="form-floating mb-3 col-1">
 
@@ -426,8 +435,8 @@
                                     <div class="form-floating col-1">
                                         <select id="TramitType" class="form-select" required>
                                             <option value="0" hidden></option>
-                                            <option disabled value="1">LEGALIZACIONES Y VISADOS</option>
-                                            <option disabled value="2">VISA CON PERMISO DE INM</option>
+                                            <option value="1">LEGALIZACIONES Y VISADOS</option>
+                                            <option value="2">VISA CON PERMISO DE INM</option>
                                             <option selected value="3">VISA SIN PERMISO DE INM</option>
                                         </select>
                                         <label for="TramitType">Tipo de trámite</label>
@@ -438,10 +447,10 @@
                                     <div class="form-floating col-1 visatypecss">
                                         <select id="VisaType" class="form-select" required>
                                             <option disabled hidden>Tipo de Visa</option>
-                                            <option disabled value="">VISA ESTUDIANTES</option>
-                                            <option disabled value="">VISA BECARIOS CONACYT</option>
+                                            <option value="">VISA ESTUDIANTES</option>
+                                            <option value="">VISA BECARIOS CONACYT</option>
                                             <option selected value="">VISA TURISMO Y TRÁNSITO</option>
-                                            <option disabled value="">VISA VINCULO Y UNIDAD FAMILIAR</option>
+                                            <option value="">VISA VINCULO Y UNIDAD FAMILIAR</option>
                                         </select>
                                         <label for="VisaType">Tipo de Visa</label>
                                         <div class="invalid-feedback">
@@ -466,7 +475,7 @@
                                         </div>
                                     </div>
                                     <div class="form-floating col-1">
-                                        <input type="time" id="appointmenthour" class="form-control" name="{{form.appointment_hour.name}}" required>
+                                        <input type="time" id="appointmenthour" min="08:00" max="15:00" class="form-control" name="{{form.appointment_hour.name}}" required>
                                         <label for="appointmenthour">Hora de Cita</label>
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
@@ -602,7 +611,11 @@
         maxDate: new Date(2022,12,31),
         field: document.getElementById('appointmentdate'),
         disableWeekends: true,
-          
+        
+        //FOOO
+        
+        //FOOO
+
         position: 'top left',
         onSelect: function() {
             console.log(this.getMoment().format('L'));
@@ -623,6 +636,7 @@
             field.value = this.getMoment().format('DD/MM/YYYY');
         },
         maxDate: new Date(),
+        yearRange: [1930,2022],
         field: document.getElementById('BornDate'),
           
         position: 'top left',
@@ -631,6 +645,25 @@
         }
 
     });
+    </script>
+    <script type="text/javascript">
+        function mostrarPassword() {
+            var cambio = document.getElementById("Password");
+            if (cambio.type == "password") {
+                cambio.type = "text";
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            } else {
+                cambio.type = "password";
+                $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            }
+        }
+
+        $(document).ready(function () {
+            //CheckBox mostrar contraseña
+            $('#ShowPassword').click(function () {
+                $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
     </script>
 
 </body>
