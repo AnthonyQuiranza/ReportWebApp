@@ -597,6 +597,7 @@
         onSelect: function(date) {
             field.value = this.getMoment().format('DD/MM/YYYY');
         },
+        defaultDate: new Date(2022,11,01),
         minDate: new Date(2022,11,01),
         maxDate: new Date(2022,12,31),
         field: document.getElementById('appointmentdate'),
@@ -623,7 +624,6 @@
         },
         maxDate: new Date(),
         field: document.getElementById('BornDate'),
-        disableWeekends: true,
           
         position: 'top left',
         onSelect: function() {
