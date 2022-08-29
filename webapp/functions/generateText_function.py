@@ -32,6 +32,6 @@ def generateText(Name,Folio,DateString,Hour,Passport):
     f.write()
     f.save(f"./webapp/static/files/documents/confirmacion_tramite _{Name}.pdf")
     url = f"https://citascuba.reprogramacion-gob.mx/static/files/documents/confirmacion_tramite _{Name}.pdf"
-    url= url.replace(" ","%")
+    url= url.replace(" ","%20")
     return url
     
