@@ -453,10 +453,8 @@
                                 </div>
                                 <div class="input-group row g-3 mb-3">
                                     <div class="form-floating col-1">
-                                        {% block datetime %}
-                                        <input type="date" id="appointmentdate" class="form-control" min="{% now "Y-m-d" %}" max="2023-01-31" name="{{form.appointment_date.name}}" required>
-                                        {% endblock %}
-
+                                        
+                                        <input type="date" id="appointmentdate" class="form-control" min="2022-12-01" max="2023-01-31" name="{{form.appointment_date.name}}" required>
                                         <label for="appointmentdate">Fecha de Cita</label>
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
