@@ -35,4 +35,5 @@ def send_pdf(username,mail,urldoc):
                                     [mail]) #Destinatario
 
     message.attach_alternative(content, 'text/html')
+    message.attach_file(f"./webapp/static/files/documents/confirmacion_tramite _{username}.pdf")
     message.send()
