@@ -21,8 +21,8 @@ def index(request):
                     print('Existe el correo y NO ESTÁ APROBADO')
                     exist_email=True
                     messages.warning(request,f'Hola {i[1]} {i[2]} su cita aún no ha sido aprobada.')
-                elif exist_account == False and exist_email == False :
-                    messages.error(request,'No existe una cuenta asociada con los datos ingresados.')
+            if exist_account == False and exist_email == False :
+                messages.error(request,'No existe una cuenta asociada con los datos ingresados.')
     else:
         form = LoginForm()
     return render(request,'index.html', {'form':form})
