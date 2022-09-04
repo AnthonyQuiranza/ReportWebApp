@@ -100,8 +100,12 @@ WSGI_APPLICATION = 'reportapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':'40.117.152.252',
+        'PORT':'3306',
+        'USER':'anthony',
+        'PASSWORD':'Upec2022..',
+        'NAME':'citas_cuba',
     }
 }
 

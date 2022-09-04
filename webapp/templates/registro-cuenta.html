@@ -391,7 +391,7 @@
                                         </div>
                                     </div>
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="Email" type="email" onkeyup="this.value = this.value.toUpperCase();" placeholder="Correo electrónico" class="form-control" name="{{form.email.name}}" required>
+                                        <input autocomplete="off" minlength="5" maxlength="40" id="Email" type="email" onkeyup="this.value = this.value.toUpperCase();" placeholder="Correo electrónico" class="form-control" name="{{form.email.name}}" required>
                                         <label for="Email">
                                             Correo electrónico
                                         </label>
@@ -407,7 +407,7 @@
                                     <div class="form-floating mb-3 col-1">
                                         <div class="input-group">
                                             
-                                            <input id="Password" type="password" placeholder="Contraseña" class="form-control" required>
+                                            <input  minlength="8" maxlength="20" id="Password" type="password" placeholder="Contraseña" class="form-control" autocomplete="off" required>
                                             
                                             <button id="show_password" class="btn btn-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
                                         
@@ -419,7 +419,7 @@
                                     </div>
                                     <div class="form-floating mb-3 col-1">
                                         <div class="input-group">
-                                            <input id="PasswordRepeat" type="password" placeholder="Repetir Contraseña" class="form-control" required>
+                                            <input minlength="8" maxlength="20" id="PasswordRepeat" type="password" placeholder="Repetir Contraseña" class="form-control" required>
                                         
                                         <div class="invalid-feedback">
                                             Este es un campo requerido

@@ -51,7 +51,7 @@ def registro_cuenta(request):
             
             post.folio = f'EP{gen_folio_code()}'
             post.verification_code = gen_verification_code()
-            post.pdf_url=generateText(f'{post.name} {post.last_name}',post.folio,post.appointment_date,post.appointment_hour,post.passport)
+            
             send_mail(f'{post.name} {post.last_name}',post.email,post.verification_code)
             post.save()
             return HttpResponseRedirect('/activacion')
