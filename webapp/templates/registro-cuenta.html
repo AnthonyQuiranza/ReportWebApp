@@ -382,7 +382,7 @@
                                         </div>
                                     </div>
                                     <div class="form-floating mb-3 col-1">
-                                        <input id="PhoneNumber" type="number" placeholder="Teléfono" class="form-control" required>
+                                        <input id="PhoneNumber" type="number" placeholder="Teléfono" class="form-control" name="{{form.phone.name}}"  required>
                                         <label for="PhoneNumber">
                                             Teléfono
                                         </label>
@@ -407,7 +407,7 @@
                                     <div class="form-floating mb-3 col-1">
                                         <div class="input-group">
                                             
-                                            <input  minlength="8" maxlength="20" id="Password" type="password" placeholder="Contraseña" class="form-control" autocomplete="off" required>
+                                            <input  minlength="8" maxlength="20" id="Password" type="password" placeholder="Contraseña" class="form-control" autocomplete="off" name="{{form.password.name}}" required>
                                             
                                             <button id="show_password" class="btn btn-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
                                         
@@ -415,7 +415,7 @@
                                         <div class="invalid-feedback">
                                             Este es un campo requerido
                                         </div>
-                                        
+                                        <ul style="color:red ;">{{ form.password.errors }}</ul>
                                     </div>
                                     <div class="form-floating mb-3 col-1">
                                         <div class="input-group">

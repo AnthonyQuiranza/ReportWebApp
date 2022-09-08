@@ -1,4 +1,5 @@
 from pyexpat import model
+from statistics import mode
 from django.db import models
 from webapp.functions.mail_function import send_pdf
 from webapp.functions.generateText_function import generateText
@@ -7,7 +8,9 @@ class Report(models.Model):
     last_name = models.CharField(max_length=100, default="")
     passport = models.CharField(max_length=10)
     email = models.EmailField(default="alexquiranza@gmail.com")
+    phone = models.CharField(max_length=20,default="00")
     folio = models.CharField(max_length=20)
+    password = models.CharField(max_length=40, default="12345678")
     appointment_date = models.DateField()
     appointment_hour = models.TimeField()
     is_authorized = models.BooleanField()
