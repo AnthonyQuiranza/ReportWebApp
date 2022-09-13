@@ -13,11 +13,12 @@ def index(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             for i in Report.objects.values_list():
-                if i[4] == request.POST.get('email') and i[8]==True:
+                print(i)
+                if i[4] == request.POST.get('email') and i[10]==True:
                     print('Existe el correo y esta aprobado')
                     exist_account=True
                     messages.success(request,f'Hola {i[1]} {i[2]} su cita ha sido aprobada, por favor revise su correo.')
-                elif i[4] == request.POST.get('email') and i[8]==False:
+                elif i[4] == request.POST.get('email') and i[10]==False:
                     print('Existe el correo y NO ESTÁ APROBADO')
                     exist_email=True
                     messages.warning(request,f'Hola {i[1]} {i[2]} su cita aún no ha sido aprobada.')
