@@ -8,4 +8,4 @@ def gen_verification_code(len=40):
          ## Tome 4 letras y números aleatorios generados aleatoriamente y empalme en un código de inserción de 4 dígitos
     return ''.join(random.sample(code_str,len))
 def gen_folio_code():
-     return random.randint(100000000000000000,999999999999999999)
+     return random.randint(10000000,99999999)
