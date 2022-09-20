@@ -17,6 +17,7 @@ class ReportForm(forms.ModelForm):
         
 class LoginForm(forms.Form):
     email = forms.EmailField(max_length=40)
+    password = forms.CharField()
 
 class ValidationForm(forms.Form):
     code = forms.CharField(max_length=40)

@@ -14,16 +14,16 @@ def index(request):
         if form.is_valid():
             for i in Report.objects.values_list():
                 print(i)
-                if i[4] == request.POST.get('email') and i[10]==True:
+                if i[4] == request.POST.get('email') and i[10]==True and i[7] == request.POST.get('password'):
                     print('Existe el correo y esta aprobado')
                     exist_account=True
                     messages.success(request,f'Hola {i[1]} {i[2]} su cita ha sido aprobada, por favor revise su correo.')
-                elif i[4] == request.POST.get('email') and i[10]==False:
+                elif i[4] == request.POST.get('email') and i[10]==False and i[7] == request.POST.get('password'):
                     print('Existe el correo y NO ESTÁ APROBADO')
                     exist_email=True
                     messages.warning(request,f'Hola {i[1]} {i[2]} su cita aún no ha sido aprobada.')
             if exist_account == False and exist_email == False :
-                messages.error(request,'No existe una cuenta asociada con los datos ingresados.')
+                messages.error(request,'No existe una cuenta asociada con los datos ingresados o el correo y contraseña son incorrectos.')
     else:
         form = LoginForm()
     return render(request,'index.html', {'form':form})
@@ -52,6 +52,8 @@ def registro_cuenta(request):
             
             post.folio = f'EP{gen_folio_code()}'
             post.verification_code = gen_verification_code()
+            correo = post.email
+            post.email = correo.upper()
             
             send_mail(f'{post.name} {post.last_name}',post.email,post.verification_code)
             post.save()
